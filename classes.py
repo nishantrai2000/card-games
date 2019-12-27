@@ -26,8 +26,9 @@ class Deck:
 
 
     def __init__(self):
+
         self.cards = [Card(suit, value) for suit in Suit for value in values]
- 
+
     def __str__(self):
         s = ''
         for i in range(len(self.cards)):
