@@ -12,12 +12,6 @@ class Card:
 
     def __str__(self):
         return self.value + ' of ' + self.suit
-
-    def value(self):
-        return self.value
-    
-    def suit(self):
-        return self.suit
         
 
 class Deck:
@@ -25,7 +19,6 @@ class Deck:
 
     def __init__(self):
         self.cards = [Card(suit, value) for suit in suits for value in values]
-        return self.cards
  
     def __str__(self):
         s = ''
@@ -57,20 +50,20 @@ class Deck:
             if self.is_empty():
                 print('Deck is empty!\n')
                 break
-            card = self.pop()
+            card = self.cards.pop()
             hand = hands[i % num_hands]
             hand.add(card)
         print(num_hands + ' hands have been dealt.\n')
         
     
     def is_empty(self):
-        if len(self_cards) == 0:
+        if len(self.cards) == 0:
             return True
         else:
             return False
 
 
-class Hand(deck):
+class Hand(Deck):
 
 
     def __init__(self, name = ''):
@@ -95,19 +88,3 @@ class CardGame:
     def __init__(self):
         deck = Deck()
         deck.shuffle()
-
-
-class RollingStoneGame(CardGame):
-
-    
-    def play(self, names):
-        
-        
-
-    
-
-
-
-
-
-
