@@ -1,7 +1,15 @@
 import random
 import time
+
 values = ['Ace'] + [str(n) for n in range (2,11)] + ['J','Q','K']
-suits = ['Hearts','Diamonds','Clubs','Spades']
+
+
+class Suit:
+    Hearts = 'Hearts'
+    Diamonds = 'Diamonds'
+    Spades = 'Spades'
+    Clubs = 'Clubs'
+
 
 class Card:
 
@@ -18,7 +26,7 @@ class Deck:
 
 
     def __init__(self):
-        self.cards = [Card(suit, value) for suit in suits for value in values]
+        self.cards = [Card(suit, value) for suit in Suit for value in values]
  
     def __str__(self):
         s = ''
