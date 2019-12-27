@@ -57,10 +57,7 @@ class Deck:
         
     
     def is_empty(self):
-        if len(self.cards) == 0:
-            return True
-        else:
-            return False
+        return(len(self.cards) == 0)
 
 
 class Hand(Deck):
