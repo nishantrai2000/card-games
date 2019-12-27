@@ -1,10 +1,14 @@
+
 import random
 import time
+from enum import Enum
 
 values = ['Ace'] + [str(n) for n in range (2,11)] + ['J','Q','K']
 
 
-class Suit:
+class Suit(Enum):
+
+
     Hearts = 'Hearts'
     Diamonds = 'Diamonds'
     Spades = 'Spades'
@@ -26,9 +30,8 @@ class Deck:
 
 
     def __init__(self):
-
         self.cards = [Card(suit, value) for suit in Suit for value in values]
-
+ 
     def __str__(self):
         s = ''
         for i in range(len(self.cards)):
