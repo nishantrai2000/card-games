@@ -15,7 +15,7 @@ class RollingStoneGame():
             name = input("Player %d's name?:\n"%(i))
             hands.append(name) 
         deck.deal_hands(hands, 8)
-          
+
 
 class RollingStoneDeck(Deck):
 
@@ -25,6 +25,5 @@ class RollingStoneDeck(Deck):
             for card in self.cards:
                 if card.value == value:
                     self.cards.remove(card)
-
 
 RollingStoneGame()        
