@@ -6,8 +6,6 @@ values = ['Ace'] + [str(n) for n in range (2,11)] + ['J','Q','K']
 
 
 class Suit(Enum):
-
-
     Hearts = 'Hearts'
     Diamonds = 'Diamonds'
     Spades = 'Spades'
