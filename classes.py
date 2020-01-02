@@ -64,7 +64,7 @@ class Deck:
                 break
             card = self.cards.pop()
             hands[i % num_hands].add(card)
-        print(num_hands + ' hands have been dealt.\n')
+        print(str(num_hands) + ' hands have been dealt.\n')
     
     def is_empty(self):
         return(len(self.cards) == 0)
